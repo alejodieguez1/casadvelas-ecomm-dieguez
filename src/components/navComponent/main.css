@@ -1,0 +1,101 @@
+#header-section {
+    background-color: #ffff;
+    box-shadow: 0px 0px 5px #464646;
+  }
+  #header-section .spacer-bar {
+    height: 2px;
+    width: 100%;
+    background: #D9C09F;
+  }
+  #header-section #nav-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #header-section #nav-section img {
+    margin-left: 10px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+  }
+  #header-section #nav-section img:hover {
+    cursor: pointer;
+  }
+  #header-section #nav-section .widgetContainer {
+    cursor: pointer;
+    align-self: center;
+    background-color: #D9C09F;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px black;
+  }
+  #header-section #nav-section .widgetContainer img {
+    margin-left: 0px;
+    width: 15px;
+    height: 15px;
+  }
+  #header-section #nav-section .hmb-menu {
+    display: none;
+  }
+  #header-section #nav-section .hmb-label {
+    float: right;
+    margin: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  #header-section #nav-section .hmb-label .bar {
+    background-color: #D9C09F;
+    margin: 2px;
+    height: 2px;
+    width: 19px;
+    border-radius: 5px;
+  }
+  #header-section #nav-section .nav-ul {
+    position: absolute;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    background-color: #D9C09F;
+    overflow: hidden;
+    width: 100%;
+    z-index: 100;
+    margin: 0;
+    top: 102px;
+    padding: 0px;
+  }
+  #header-section #nav-section .nav-ul li {
+    margin: 60px;
+    list-style: none;
+  }
+  #header-section #nav-section .nav-ul li a {
+    font-size: 1.2rem;
+    color: #ffff;
+    text-decoration: none;
+    font-family: "Recoleta";
+    cursor: pointer;
+  }
+  #header-section #nav-section #hmb-menu:checked ~ .nav-ul {
+    max-height: 500px;
+    height: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.233);
+  }
+  #header-section #nav-section #hmb-menu:checked ~ .hmb-label .bar1 {
+    transform: translate(0, 6.2px) rotate(45deg);
+    transition: 0.2s ease-out;
+    width: 20px;
+  }
+  #header-section #nav-section #hmb-menu:checked ~ .hmb-label .bar2 {
+    opacity: 0;
+    transform: translate(-10px);
+    transition: 0.2s;
+  }
+  #header-section #nav-section #hmb-menu:checked ~ .hmb-label .bar3 {
+    transform: translate(0, -6.2px) rotate(-45deg);
+    transition: 0.2s ease-out;
+    width: 20px;
+  }
