@@ -1,3 +1,4 @@
+import CartWidget from '../cartWidget/CartWidget'
 import icon from './logo-navbar.jpg'
 import './main.css'
 function NavBar() {
@@ -5,6 +6,7 @@ function NavBar() {
         <header id="header-section">
             <nav id="nav-section">
                 <img src={icon} alt="Casa D Velas Logotipo"/>
+                <CartWidget/>
                 <input type="checkbox" id="hmb-menu" className="hmb-menu"/>
                 <label htmlFor="hmb-menu" className="hmb-label">
                     <span className="bar bar1"/>
