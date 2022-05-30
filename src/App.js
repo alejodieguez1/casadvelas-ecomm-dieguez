@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <ItemListContainer greeting={saludar}/>
+      <ItemListContainer/>
     </div>
   );
 }
