@@ -1,12 +1,19 @@
+html {
+  font-size: 16px;
+  font-family: 'Recoleta';
+}
+body {
+  font-family: 'Recoleta';
+}
 #header-section {
     background-color: #ffff;
     box-shadow: 0px 0px 5px #464646;
   }
-  #header-section .spacer-bar {
+  /* #header-section .spacer-bar {
     height: 2px;
     width: 100%;
     background: #D9C09F;
-  }
+  } */
   #header-section #nav-section {
     display: flex;
     flex-direction: row;
@@ -47,7 +54,7 @@
   }
   #header-section #nav-section .hmb-label {
     float: right;
-    margin: 40px;
+    margin: 45px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -63,30 +70,48 @@
   #header-section #nav-section .nav-ul {
     position: absolute;
     max-height: 0;
-    transition: max-height 0.3s ease;
-    background-color: #D9C09F;
+    transition: 0.3s ease;
+    background-color: #ffff;
     overflow: hidden;
     width: 100%;
     z-index: 100;
     margin: 0;
     top: 102px;
     padding: 0px;
+    text-align: center;
+  }
+  .nav-span {
+    display: inline-block;
+    height: 2px;
+    width: 40%;
+    background-color: #D9C09F;
+  }
+  .middle-span {
+    width: 80%;
   }
   #header-section #nav-section .nav-ul li {
-    margin: 60px;
+    margin: 30px;
     list-style: none;
   }
   #header-section #nav-section .nav-ul li a {
-    font-size: 1.2rem;
-    color: #ffff;
+    font-size: 1.3rem;
+    color: #D9C09F;
     text-decoration: none;
     font-family: "Recoleta";
     cursor: pointer;
   }
+  #header-section #nav-section .nav-ul li a:hover {
+    text-decoration: underline;
+    font-size: 1.35rem;
+    transition: 0.25s;
+  }
   #header-section #nav-section #hmb-menu:checked ~ .nav-ul {
     max-height: 500px;
     height: 100%;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.233);
+    box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.233);
+  }
+  #hmb-menu:checked ~ .spacer-bar {
+    color: #ffff;
   }
   #header-section #nav-section #hmb-menu:checked ~ .hmb-label .bar1 {
     transform: translate(0, 6.2px) rotate(45deg);

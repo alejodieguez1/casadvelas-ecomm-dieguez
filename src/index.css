@@ -6,6 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@font-face {
+  font-family: "Recoleta";
+  src: local("Recoleta"), url("./assets/fonts/RecoletaAlt-Medium.woff") format("truetype");
+  font-weight: normal;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
