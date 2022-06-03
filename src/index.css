@@ -8,7 +8,12 @@ body {
 }
 @font-face {
   font-family: "Recoleta";
-  src: local("Recoleta"), url("./assets/fonts/RecoletaAlt-Medium.woff") format("truetype");
+  src: local("Recoleta"), url("./assets/fonts/RecoletaAlt-Medium.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Recoleta";
+  src: local("Recoleta"), url("./assets/fonts/RecoletaAlt-Medium.woff2") format("woff2");
   font-weight: normal;
 }
 
