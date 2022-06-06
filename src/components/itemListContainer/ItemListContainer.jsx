@@ -8,7 +8,7 @@ export default function ItemListContainer() {
   const [productos, setProductos] = useState([]);
 
   useEffect(()=>{
-    const useData = async () => {
+    const data = async () => {
       try{
         const result = await getData()
         setProductos(result)
@@ -16,7 +16,7 @@ export default function ItemListContainer() {
         console.error("Ha habido un error", err);
       };
     }
-    useData()
+    data()
   },[])
   return (
       <div className="itemListContainer">
