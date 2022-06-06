@@ -1,19 +1,7 @@
-import { useState } from 'react';
-import { getData } from '../../../mocks/DataBase';
 import { Item } from '../item/Item';
 
 
-function ItemList() {
-  const [productos, setProductos] = useState([]);
-  async function useData(){
-    try{
-      const result = await getData()
-      setProductos(result);
-    }catch(err){
-      console.error("Ha habido un error", err);
-    };
-  };
-  useData();
+function ItemList({productos}) {
   return (
     <div className="itemList">
       {
