@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import icon from "./logo-navbar.jpg";
 import "./main.css";
 function NavBar() {
@@ -13,17 +14,21 @@ function NavBar() {
         </label>
         <ul className="nav-ul">
           <li className="nav-li">
-            <a className="li-a">Inicio</a>
+            <Link to="/" className="li-a">
+              Inicio
+            </Link>
           </li>
-          <span className="nav-span"/>
+          <span className="nav-span" />
           <li className="nav-li">
-            <a className="li-a">Productos</a>
+            <Link to="/products" className="li-a">
+              Productos
+            </Link>
           </li>
-          <span className="nav-span middle-span"/>
+          <span className="nav-span middle-span" />
           <li className="nav-li">
             <a className="li-a">Carrito</a>
           </li>
-          <span className="nav-span"/>
+          <span className="nav-span" />
           <li className="nav-li">
             <a className="li-a">Contacto</a>
           </li>
