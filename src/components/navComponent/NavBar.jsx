@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import icon from "./logo-navbar.jpg";
 import "./main.css";
+let logo = require('../../assets/logo-white-bg.jpg')
 function NavBar() {
   return (
     <header id="header-section">
       <nav id="nav-section">
-        <img src={icon} alt="Casa D Velas Logotipo" />
+        <img src={logo} alt="Casa D Velas Logotipo" />
         <input type="checkbox" id="hmb-menu" className="hmb-menu" />
         <label htmlFor="hmb-menu" className="hmb-label">
           <span className="bar bar1" />

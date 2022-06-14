@@ -36,9 +36,7 @@ export default function ItemDetailContainer() {
           <div className="double-bounce2"></div>
         </div>
       ) : (
-        <div className="itemDetailContainer">
           <ItemDetail products={products} />
-        </div>
       )}
     </>
   );
