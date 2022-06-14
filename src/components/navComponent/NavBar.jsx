@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./main.css";
-let logo = require('../../assets/logo-white-bg.jpg')
+let logo = require("../../assets/logo-white-bg.jpg");
 function NavBar() {
   return (
     <header id="header-section">
