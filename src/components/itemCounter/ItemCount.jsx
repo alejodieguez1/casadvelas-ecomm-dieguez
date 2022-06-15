@@ -21,8 +21,6 @@ function ItemCount({ initial, stock, onAdd }) {
   }
   return (
     <div id="product-container">
-      <p>Este es un producto</p>
-      <p>El stock de este producto es: {stock}</p>
       <div className="count-container">
         <button
           type="button"
@@ -31,7 +29,7 @@ function ItemCount({ initial, stock, onAdd }) {
         >
           -
         </button>
-        <p>Cantidad: {count}</p>
+        <p>Cantidad:{count}</p>
         <button
           type="button"
           className="product-btn count-btn"
@@ -39,6 +37,7 @@ function ItemCount({ initial, stock, onAdd }) {
         >
           +
         </button>
+        <p>El stock de este producto es: {stock}</p>
         <button
           type="button"
           className="product-btn cart-btn"

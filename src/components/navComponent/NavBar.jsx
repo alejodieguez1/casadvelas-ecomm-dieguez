@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./main.css";
 let logo = require("../../assets/logo-white-bg.jpg");
 function NavBar() {
+
   return (
     <header id="header-section">
       <nav id="nav-section">
@@ -19,10 +20,17 @@ function NavBar() {
             </Link>
           </li>
           <span className="nav-span" />
-          <li className="nav-li">
-            <Link to="/products" className="li-a">
-              Productos
+          <li className="nav-li dropdown">
+            <Link to="/products" className="li-a down">
+              Productos 
             </Link>
+            <div id="drop-mn" className="dropdown-content">
+              <a className="drop-btn drop-link">Velas</a>
+              <a className="drop-btn drop-link">Difusores</a>
+              <a className="drop-btn drop-link">Homespray</a>
+              <a className="drop-btn drop-link">Centros de mesa</a>
+              <a className="drop-btn drop-link">GiftBoxes</a>
+            </div>
           </li>
           <span className="nav-span middle-span" />
           <li className="nav-li">

@@ -10,11 +10,8 @@ export default function ItemListContainer() {
 
   const location = useLocation();
 
-  if (location.pathname == "/") {
-    console.log("Estas en casa");
-  }
   useEffect(() => {
-    if (location.pathname == "/") {
+    if (location.pathname == "/" || location.pathname == "/products") {
       setLoading(true);
       const data = async () => {
         try {

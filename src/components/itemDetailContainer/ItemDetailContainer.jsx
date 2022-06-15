@@ -3,7 +3,7 @@ import ItemDetail from "./itemDetail/ItemDetail";
 import "./main.css";
 
 export default function ItemDetailContainer() {
-  const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ export default function ItemDetailContainer() {
       fetch("https://mocki.io/v1/480f2ce6-fa5f-4775-8962-fcc9e70ef548")
         .then((response) => response.json())
         .then((data) => {
-          setProducts(data);
+          setProduct(data);
         })
 
         .catch((e) => {
@@ -36,7 +36,7 @@ export default function ItemDetailContainer() {
           <div className="double-bounce2"></div>
         </div>
       ) : (
-        <ItemDetail products={products} />
+        <ItemDetail products={product} />
       )}
     </>
   );
