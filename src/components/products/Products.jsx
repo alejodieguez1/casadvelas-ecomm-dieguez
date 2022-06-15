@@ -4,7 +4,7 @@ import ItemDetailContainer from "../itemDetailContainer/ItemDetailContainer";
 export default function Products() {
   return (
     <div>
-        <ItemDetailContainer/>
+      <ItemDetailContainer />
     </div>
   );
 }

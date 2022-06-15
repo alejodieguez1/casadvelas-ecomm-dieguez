@@ -11,7 +11,10 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/products" element={<Products />}>
+            <Route path="/products/:category" />
+            <Route path="/products/:id" />
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
