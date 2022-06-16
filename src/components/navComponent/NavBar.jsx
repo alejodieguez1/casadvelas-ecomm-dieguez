@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import "./main.css";
-import CartWidget from '../cartWidget/CartWidget'
+import CartWidget from "../cartWidget/CartWidget";
 let logo = require("../../assets/logo-white-bg.jpg");
 function NavBar() {
   return (
     <header id="header-section">
       <nav id="nav-section">
-        <img src={logo} alt="Casa D Velas Logotipo" />
-        <CartWidget/>
+        <Link to="/">
+          <img src={logo} alt="Casa D Velas Logotipo" />
+        </Link>
+        <CartWidget />
         <input type="checkbox" id="hmb-menu" className="hmb-menu" />
         <label htmlFor="hmb-menu" className="hmb-label">
           <span className="bar bar1" />
@@ -27,19 +29,34 @@ function NavBar() {
             </Link>
             <span className="nav-span products-span middle-span" />
             <div id="drop-mn" className="dropdown-content">
-              <Link to="/products/category/velas" className="drop-btn drop-link">
+              <Link
+                to="/products/category/velas"
+                className="drop-btn drop-link"
+              >
                 Velas
               </Link>
-              <Link to="/products/category/difusores" className="drop-btn drop-link">
+              <Link
+                to="/products/category/difusores"
+                className="drop-btn drop-link"
+              >
                 Difusores
               </Link>
-              <Link to="/products/category/homespray" className="drop-btn drop-link">
+              <Link
+                to="/products/category/homespray"
+                className="drop-btn drop-link"
+              >
                 Homespray
               </Link>
-              <Link to="/products/category/centros" className="drop-btn drop-link">
+              <Link
+                to="/products/category/centros"
+                className="drop-btn drop-link"
+              >
                 Centros de mesa
               </Link>
-              <Link to="/products/category/gifts" className="drop-btn drop-link">
+              <Link
+                to="/products/category/gifts"
+                className="drop-btn drop-link"
+              >
                 GiftBoxes
               </Link>
             </div>
@@ -53,7 +70,6 @@ function NavBar() {
             <a className="li-a">Contacto</a>
           </li>
         </ul>
-
       </nav>
     </header>
   );

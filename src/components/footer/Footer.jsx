@@ -1,12 +1,16 @@
 import React from "react";
 import "./main.css";
+import { Link } from "react-router-dom";
+
 let logo = require("../../assets/logo-white-bg.jpg");
 
 export default function Footer() {
   return (
     <footer id="footer-section">
       <div className="footer-container">
-        <img src={logo} alt="Casa D Velas logotipo" />
+        <Link to="/">
+          <img src={logo} alt="Casa D Velas Logotipo" />
+        </Link>
         <div className="social-logos">
           <a href="https://www.facebook.com/casadvelashome" target="_blank">
             <i className="fab fa-facebook"></i>

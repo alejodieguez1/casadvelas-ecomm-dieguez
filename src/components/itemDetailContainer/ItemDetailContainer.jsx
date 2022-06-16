@@ -21,16 +21,12 @@ export default function ItemDetailContainer() {
     };
     data();
   }, [id]);
-  return (
-    <>
-      {product ? (
-        <ItemDetail product={product} />
-      ) : (
-        <div className="spinner">
-          <div className="double-bounce1"></div>
-          <div className="double-bounce2"></div>
-        </div>
-      )}
-    </>
+  return loading ? (
+    <div className="spinner">
+      <div className="double-bounce1"></div>
+      <div className="double-bounce2"></div>
+    </div>
+  ) : (
+    <ItemDetail product={product} />
   );
 }
