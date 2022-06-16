@@ -84,8 +84,12 @@ body {
 .middle-span {
   width: 80%;
 }
+.products-span {
+  align-self: center;
+  margin-top: 20px;
+}
 #header-section #nav-section .nav-ul li {
-  margin: 30px;
+  margin: 3px;
   list-style: none;
 }
 #header-section #nav-section .nav-ul li a {
@@ -95,23 +99,25 @@ body {
   font-family: "Recoleta";
   cursor: pointer;
 }
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
 .dropdown-content {
   display: flex;
   flex-direction: column;
   position: relative;
-  max-height: 0;
   width: 100%;
   transition: 0.3s;
   overflow: hidden;
   align-content: center;
   z-index: 200;
+  max-height: 200px;
+  height: 200px;
 }
 .dropdown-content a {
   margin-top: 12px;
-}
-.dropdown:hover .dropdown-content {
-  max-height: 200px;
-  height: 200px;
 }
 #header-section #nav-section .nav-ul li a:hover {
   text-decoration: underline;

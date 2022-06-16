@@ -1,42 +1,35 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { getData } from "../../mocks/DataBase";
 import ItemDetail from "./itemDetail/ItemDetail";
 import "./main.css";
 
 export default function ItemDetailContainer() {
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(false);
-
+  const { id } = useParams();
   useEffect(() => {
     setLoading(true);
-
-    const getApi = () => {
-      fetch("https://mocki.io/v1/480f2ce6-fa5f-4775-8962-fcc9e70ef548")
-        .then((response) => response.json())
-        .then((data) => {
-          setProduct(data);
-        })
-
-        .catch((e) => {
-          console.log("Salio mal", e);
-        })
-
-        .finally(() => {
-          setLoading(false);
-        });
+    const data = async () => {
+      try {
+        const result = await getData();
+        setProduct(result.find((producto) => producto.id == id));
+        setLoading(false);
+      } catch (err) {
+        console.error("Ha habido un error", err);
+      }
     };
-    setTimeout(() => {
-      getApi();
-    }, 2000);
-  }, []);
+    data();
+  }, [id]);
   return (
     <>
-      {loading ? (
+      {product ? (
+        <ItemDetail product={product} />
+      ) : (
         <div className="spinner">
           <div className="double-bounce1"></div>
           <div className="double-bounce2"></div>
         </div>
-      ) : (
-        <ItemDetail products={product} />
       )}
     </>
   );
