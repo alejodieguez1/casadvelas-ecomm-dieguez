@@ -59,6 +59,12 @@ function NavBar() {
               >
                 GiftBoxes
               </Link>
+              <Link
+                to="/products/category/especieros"
+                className="drop-btn drop-link"
+              >
+                Especieros
+              </Link>
             </div>
           </li>
           <span className="nav-span middle-span" />

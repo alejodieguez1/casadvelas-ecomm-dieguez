@@ -113,8 +113,8 @@ body {
   overflow: hidden;
   align-content: center;
   z-index: 200;
-  max-height: 200px;
-  height: 200px;
+  max-height: 250px;
+  height: 250px;
 }
 .dropdown-content a {
   margin-top: 12px;
