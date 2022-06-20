@@ -69,7 +69,9 @@ function NavBar() {
           </li>
           <span className="nav-span middle-span" />
           <li className="nav-li">
-            <a className="li-a">Carrito</a>
+            <Link to="/cart" className="li-a down">
+              Carrito
+            </Link>
           </li>
           <span className="nav-span" />
           <li className="nav-li">

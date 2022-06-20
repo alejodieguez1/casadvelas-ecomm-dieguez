@@ -8,7 +8,6 @@ export default function ItemListContainer() {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
-  console.log(id);
   useEffect(() => {
     setLoading(true);
     const data = async () => {
@@ -30,6 +29,8 @@ export default function ItemListContainer() {
       <div className="double-bounce2"></div>
     </div>
   ) : (
-    <ItemList productos={productos} />
+    <section id="products-section">
+      <ItemList productos={productos} />
+    </section>
   );
 }

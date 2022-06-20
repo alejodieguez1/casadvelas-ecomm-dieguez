@@ -12,13 +12,13 @@ function ItemCount({ initial, stock, onAdd }) {
       setCount(count - 1);
     }
   }
-  function onAdd() {
-    if (stock >= 1) {
-      alert("El producto fue agregado al carrito");
-    } else if (stock < 1) {
-      alert("No tenemos stock de este producto");
-    }
-  }
+  // function onAdd() {
+  //   if (stock >= 1) {
+  //     alert("El producto fue agregado al carrito");
+  //   } else if (stock < 1) {
+  //     alert("No tenemos stock de este producto");
+  //   }
+  // }
   return (
     <div id="product-container">
       <div className="count-container">

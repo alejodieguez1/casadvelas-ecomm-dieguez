@@ -27,6 +27,8 @@ export default function ItemDetailContainer() {
       <div className="double-bounce2"></div>
     </div>
   ) : (
-    <ItemDetail product={product} />
+    <section id="products-section">
+      <ItemDetail product={product} />
+    </section>
   );
 }

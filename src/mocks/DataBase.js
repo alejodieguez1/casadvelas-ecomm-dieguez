@@ -6,7 +6,7 @@ const Productos = [
     category: "difusores",
     price: 50,
     stock: 3,
-    image: "img/dif-vdr-lbr.jpg",
+    image: "/img/dif-vdr-lbr.jpg",
   },
   {
     id: 10,
@@ -16,7 +16,7 @@ const Productos = [
     category: "velas",
     price: 70,
     stock: 11,
-    image: "img/vela-venice.jpg",
+    image: "/img/vela-venice.jpg",
   },
   {
     id: 9,
@@ -26,7 +26,7 @@ const Productos = [
     category: "difusores",
     price: 80,
     stock: 5,
-    image: "img/dif-env-pet.jpg",
+    image: "/img/dif-env-pet.jpg",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const Productos = [
     category: "difusores",
     price: 45,
     stock: 9,
-    image: "img/dif-vdr-10.jpg",
+    image: "/img/dif-vdr-10.jpg",
   },
   {
     id: 87,
@@ -45,7 +45,7 @@ const Productos = [
     category: "velas",
     price: 32,
     stock: 13,
-    image: "img/ap-velas.jpg",
+    image: "/img/ap-velas.jpg",
   },
   {
     id: 46,
@@ -54,7 +54,7 @@ const Productos = [
     category: "difusores",
     price: 57,
     stock: 2,
-    image: "img/dif-vdr-mdr.jpg",
+    image: "/img/dif-vdr-mdr.jpg",
   },
   {
     id: 67,
@@ -63,7 +63,7 @@ const Productos = [
     category: "gifts",
     price: 43,
     stock: 21,
-    image: "img/gft-small.jpg",
+    image: "/img/gft-small.jpg",
   },
   {
     id: 91,
@@ -72,7 +72,7 @@ const Productos = [
     category: "gitfs",
     price: 70,
     stock: 9,
-    image: "img/gft-md.jpg",
+    image: "/img/gft-md.jpg",
   },
   {
     id: 121,
@@ -81,7 +81,7 @@ const Productos = [
     category: "velas",
     price: 34,
     stock: 6,
-    image: "img/vela-rosie.jpg",
+    image: "/img/vela-rosie.jpg",
   },
   {
     id: 911,
@@ -90,7 +90,7 @@ const Productos = [
     category: "velas",
     price: 51,
     stock: 9,
-    image: "img/vela-bombe.jpg",
+    image: "/img/vela-bombe.jpg",
   },
   {
     id: 81,
@@ -99,7 +99,7 @@ const Productos = [
     category: "velas",
     price: 73,
     stock: 5,
-    image: "img/vela-bombe-med.jpg",
+    image: "/img/vela-bombe-med.jpg",
   },
   {
     id: 561,
@@ -108,7 +108,7 @@ const Productos = [
     category: "velas",
     price: 95,
     stock: 19,
-    image: "img/vela-bombe-lg.jpg",
+    image: "/img/vela-bombe-lg.jpg",
   },
   {
     id: 321,
@@ -117,7 +117,7 @@ const Productos = [
     category: "velas",
     price: 67,
     stock: 9,
-    image: "img/vela-cnc-md.jpg",
+    image: "/img/vela-cnc-md.jpg",
   },
   {
     id: 291,
@@ -126,7 +126,7 @@ const Productos = [
     category: "velas",
     price: 42,
     stock: 21,
-    image: "img/vela-tenesse-nt.jpg",
+    image: "/img/vela-tenesse-nt.jpg",
   },
   {
     id: 678,
@@ -135,7 +135,7 @@ const Productos = [
     category: "homespray",
     price: 82,
     stock: 11,
-    image: "img/homespray-pet.jpg",
+    image: "/img/homespray-pet.jpg",
   },
   {
     id: 792,
@@ -144,7 +144,7 @@ const Productos = [
     category: "homespray",
     price: 68,
     stock: 2,
-    image: "img/homespray-baby.jpg",
+    image: "/img/homespray-baby.jpg",
   },
   {
     id: 111,
@@ -153,7 +153,7 @@ const Productos = [
     category: "velas",
     price: 25,
     stock: 3,
-    image: "img/vela-bombe-xs.jpg",
+    image: "/img/vela-bombe-xs.jpg",
   },
   {
     id: 873,
@@ -162,7 +162,7 @@ const Productos = [
     category: "centros",
     price: 450,
     stock: 11,
-    image: "img/ctrm-3v.jpg",
+    image: "/img/ctrm-3v.jpg",
   },
   {
     id: 872,
@@ -171,7 +171,7 @@ const Productos = [
     category: "centros",
     price: 400,
     stock: 4,
-    image: "img/ctrm-2v.jpg",
+    image: "/img/ctrm-2v.jpg",
   },
   {
     id: 931,
@@ -180,7 +180,7 @@ const Productos = [
     category: "velas",
     price: 50,
     stock: 3,
-    image: "img/svnr-tp-mdf.jpg",
+    image: "/img/svnr-tp-mdf.jpg",
   },
   {
     id: 451,
@@ -189,7 +189,7 @@ const Productos = [
     category: "especieros",
     price: 220,
     stock: 10,
-    image: "img/especieros.jpg",
+    image: "/img/especieros.jpg",
   },
 ];
 
