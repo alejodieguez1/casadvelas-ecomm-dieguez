@@ -4,7 +4,7 @@ import { Contexto } from "../../context/CartContext";
 import '../itemDetailContainer/itemDetail/itemDetail.css'
 
 export default function Cart() {
-  const { cart, getItemPrice} = useContext(Contexto);
+  const { cart, getItemPrice, emptyCart, deleteItem} = useContext(Contexto);
 
   return (
     <>
@@ -19,12 +19,14 @@ export default function Cart() {
                 <p>${item.price}</p>
                 <p>Cantidad:{item.qty}</p>
                 <br />
+                <button type="button" className="btn" onClick={() => deleteItem()}>Quitar del carrito</button>
                 </div>
               </div>
             );
           })}
           <p>Final Price: ${getItemPrice()}</p>
-        </div>
+          <button type="button" className="btn" onClick={() => emptyCart()}>Vaciar carrito</button>
+        </div> 
       ) : (
         <>
         <div>El carrito esta vacio</div>
