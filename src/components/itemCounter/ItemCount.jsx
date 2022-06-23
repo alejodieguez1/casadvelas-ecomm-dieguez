@@ -1,44 +1,53 @@
-import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function ItemCount({ initial, stock, onAdd }) {
-  const [count, setCount] = useState(initial);
+function ItemCount({ qty, setQty, stock, onAdd }) {
+
+  let navigate = useNavigate();
+
   function counterPlus() {
-    if (count < stock) {
-      setCount(count + 1);
+    if (qty < stock) {
+      setQty(qty + 1);
     }
   }
   function counterMinus() {
-    if (count > initial) {
-      setCount(count - 1);
+    if (qty > 1) {
+      setQty(qty - 1);
     }
   }
   return (
-    <div id="product-container">
+    <div className="num-container">
       <div className="count-container">
         <button
           type="button"
-          className="product-btn count-btn"
+          className="product-btn count-btn btn"
           onClick={() => counterMinus()}
         >
           -
         </button>
-        <p>Cantidad:{count}</p>
+        <p>Cantidad:{qty}</p>
         <button
           type="button"
-          className="product-btn count-btn"
+          className="product-btn count-btn btn"
           onClick={() => counterPlus()}
         >
           +
         </button>
-        <p>El stock de este producto es: {stock}</p>
-        <button
-          type="button"
-          className="product-btn cart-btn"
-          onClick={() => onAdd()}
-        >
-          Add to cart
-        </button>
       </div>
+      <p>El stock de este producto es: {stock}</p>
+      <button
+        type="button"
+        className="product-btn cart-btn btn"
+        onClick={() => onAdd(qty)}
+      >
+        Add to cart
+      </button>
+      <button
+        type="button"
+        className="cart-btn btn"
+        onClick={() => navigate(-1)}
+      >
+        ← Back
+      </button>
     </div>
   );
 }

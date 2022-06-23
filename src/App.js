@@ -6,23 +6,29 @@ import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailCont
 import NavBar from "./components/navComponent/NavBar";
 import Products from "./components/products/Products";
 import Cart from "./components/cart/Cart";
+import CartContext from "./context/CartContext";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/category/:id" element={<ItemListContainer />} />
-          <Route path="/product/:id" element={<ItemDetailContainer />} />
-          <Route path="/cart" element={<Cart/>} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <CartContext>
+      <div className="App">
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route
+              path="/products/category/:id"
+              element={<ItemListContainer />}
+            />
+            <Route path="/product/:id" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </div>
+    </CartContext>
   );
 }
 

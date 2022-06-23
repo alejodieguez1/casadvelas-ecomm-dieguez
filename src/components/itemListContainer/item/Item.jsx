@@ -8,7 +8,7 @@ export const Item = ({ producto }) => {
       <img src={image} alt="Productos" />
       <h2>{name}</h2>
       <Link to={`/product/${id}`}>
-        <button>Ver detalle del producto</button>
+        <button type="button" className="btn">Ver detalle del producto</button>
       </Link>
     </div>
   );
