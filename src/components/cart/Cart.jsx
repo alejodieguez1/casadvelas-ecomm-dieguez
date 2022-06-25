@@ -19,7 +19,7 @@ export default function Cart() {
                 <p>${item.price}</p>
                 <p>Cantidad:{item.qty}</p>
                 <br />
-                <button type="button" className="btn" onClick={() => deleteItem()}>Quitar del carrito</button>
+                <button type="button" className="btn" onClick={() => deleteItem(item.id)}>Quitar del carrito</button>
                 </div>
               </div>
             );
