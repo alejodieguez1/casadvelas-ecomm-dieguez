@@ -7,8 +7,20 @@ import NavBar from "./components/navComponent/NavBar";
 import Products from "./components/products/Products";
 import Cart from "./components/cart/Cart";
 import CartContext from "./context/CartContext";
+import { initializeApp } from "firebase/app";
 
 function App() {
+  const firebaseConfig = {
+    apiKey: "AIzaSyB_2Pr8Vst4B1hVZPOBrx24wEtHvzwCKeU",
+    authDomain: "casadvelas-ecomm-dieguez.firebaseapp.com",
+    projectId: "casadvelas-ecomm-dieguez",
+    storageBucket: "casadvelas-ecomm-dieguez.appspot.com",
+    messagingSenderId: "944923055600",
+    appId: "1:944923055600:web:59f45c813666c65be1b935",
+  };
+
+  initializeApp(firebaseConfig);
+
   return (
     <CartContext>
       <div className="App">

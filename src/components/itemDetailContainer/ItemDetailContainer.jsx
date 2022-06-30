@@ -1,25 +1,32 @@
-import React, { useEffect, useState } from "react";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getData } from "../../mocks/DataBase";
 import ItemDetail from "./itemDetail/ItemDetail";
 import "./main.css";
 
 export default function ItemDetailContainer() {
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const { id } = useParams();
+
   useEffect(() => {
+    const db = getFirestore();
+
+    const productRef = doc(db, "products", id);
+
     setLoading(true);
-    const data = async () => {
-      try {
-        const result = await getData();
-        setProduct(result.find((producto) => producto.id == id));
+
+    getDoc(productRef)
+      .then((snapshot) => {
+        setProduct({ ...snapshot.data(), id: snapshot.id });
+      })
+      .catch((error) => {
+        setError(error);
+      })
+      .finally(() => {
         setLoading(false);
-      } catch (err) {
-        console.error("Ha habido un error", err);
-      }
-    };
-    data();
+      });
   }, [id]);
   return loading ? (
     <div className="spinner">
@@ -32,3 +39,15 @@ export default function ItemDetailContainer() {
     </section>
   );
 }
+
+// setLoading(true);
+// const data = async () => {
+//   try {
+//     const result = await getData();
+//     setProduct(result.find((producto) => producto.id == id));
+//     setLoading(false);
+//   } catch (err) {
+//     console.error("Ha habido un error", err);
+//   }
+// };
+// data();
