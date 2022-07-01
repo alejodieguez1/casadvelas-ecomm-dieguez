@@ -39,15 +39,3 @@ export default function ItemDetailContainer() {
     </section>
   );
 }
-
-// setLoading(true);
-// const data = async () => {
-//   try {
-//     const result = await getData();
-//     setProduct(result.find((producto) => producto.id == id));
-//     setLoading(false);
-//   } catch (err) {
-//     console.error("Ha habido un error", err);
-//   }
-// };
-// data();

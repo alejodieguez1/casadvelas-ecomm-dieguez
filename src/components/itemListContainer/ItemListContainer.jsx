@@ -3,7 +3,7 @@ import {
   getDocs,
   getFirestore,
   query,
-  where
+  where,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -63,19 +63,3 @@ export default function ItemListContainer() {
     </section>
   );
 }
-
-// useEffect(() => {
-//   setLoading(true);
-//   const data = async () => {
-//     try {
-//       const result = await getData();
-//       !id
-//         ? setProductos(result)
-//         : setProductos(result.filter((producto) => producto.category === id));
-//       setLoading(false);
-//     } catch (err) {
-//       console.error("Ha habido un error", err);
-//     }
-//   };
-//   data();
-// }, [id]);

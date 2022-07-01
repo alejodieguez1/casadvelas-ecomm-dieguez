@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
 function ItemCount({ qty, setQty, stock, onAdd }) {
-
   let navigate = useNavigate();
 
   function counterPlus() {
