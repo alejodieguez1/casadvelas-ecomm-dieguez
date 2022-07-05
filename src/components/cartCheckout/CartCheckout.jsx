@@ -12,7 +12,7 @@ export default function CartCheckout() {
     const db = getFirestore();
     const orderCollection = collection(db, "orders");
 
-    const {cart, getItemPrice} = useContext(Contexto)
+    const {cart, getItemPrice, emptyCart} = useContext(Contexto)
 
     function getData(){
         const order = {
@@ -24,6 +24,7 @@ export default function CartCheckout() {
             console.log(id);
             setBuyed(id);
         });
+        emptyCart();
     }
 
   return (

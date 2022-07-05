@@ -7,10 +7,10 @@ export default function CartWidget() {
   const {getItemQty} = useContext(Contexto);
 
   return (
-    <Link to="/cart">
+    <Link to="/cart" className='link-a'>
     <div className = 'widgetContainer'>
     <img src={icon} alt="Icono Carrito de compras"/>
-    <p>{getItemQty()}</p>
+    <p className='item-qty'>{getItemQty()}</p>
     </div>
     </Link>
   )
