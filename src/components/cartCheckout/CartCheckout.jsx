@@ -1,9 +1,6 @@
-import React from 'react'
-import { addDoc, collection, getFirestore } from 'firebase/firestore'
-import { useState } from 'react'
-import { useContext } from 'react';
+import { addDoc, collection, getFirestore } from 'firebase/firestore';
+import { useContext, useState } from 'react';
 import { Contexto } from '../../context/CartContext';
-import Cart from '../cart/Cart';
 
 export default function CartCheckout() {
     const [name, setName] = useState("");
@@ -55,11 +52,6 @@ export default function CartCheckout() {
       ) : (
         <>
           <div>El carrito esta vacio</div>
-          {/* <Link to="/products">
-            <button type="button" className="btn">
-              Busca productos
-            </button>
-          </Link> */}
         </>
       )}
     <div className="checkContainer">
