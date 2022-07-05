@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Contexto } from "../../context/CartContext";
-import '../itemDetailContainer/itemDetail/itemDetail.css'
+import "../itemDetailContainer/itemDetail/itemDetail.css";
 
 export default function Cart() {
-  const { cart, getItemPrice, emptyCart, deleteItem} = useContext(Contexto);
+  const { cart, getItemPrice, emptyCart, deleteItem } = useContext(Contexto);
 
   return (
     <>
@@ -14,23 +14,44 @@ export default function Cart() {
             return (
               <div key={index} className="product-container">
                 <div id="product-detail">
-                <img src={item.image} alt="producto" className="product-img"/>
-                <h3>{item.name}</h3>
-                <p>${item.price}</p>
-                <p>Cantidad:{item.qty}</p>
-                <br />
-                <button type="button" className="btn" onClick={() => deleteItem(item.id)}>Quitar del carrito</button>
+                  <img
+                    src={item.image}
+                    alt="producto"
+                    className="product-img"
+                  />
+                  <h3>{item.name}</h3>
+                  <p>${item.price}</p>
+                  <p>Cantidad:{item.qty}</p>
+                  <br />
+                  <button
+                    type="button"
+                    className="btn"
+                    onClick={() => deleteItem(item.id)}
+                  >
+                    Quitar del carrito
+                  </button>
                 </div>
               </div>
             );
           })}
           <p>Final Price: ${getItemPrice()}</p>
-          <button type="button" className="btn" onClick={() => emptyCart()}>Vaciar carrito</button>
-        </div> 
+          <Link to="/checkout">
+            <button type="button" className="btn">
+              Finalizar pedido
+            </button>
+          </Link>
+          <button type="button" className="btn" onClick={() => emptyCart()}>
+            Vaciar carrito
+          </button>
+        </div>
       ) : (
         <>
-        <div>El carrito esta vacio</div>
-        <Link to="/products"><button type="button" className="btn">Busca productos</button></Link>
+          <div>El carrito esta vacio</div>
+          <Link to="/products">
+            <button type="button" className="btn">
+              Busca productos
+            </button>
+          </Link>
         </>
       )}
     </>

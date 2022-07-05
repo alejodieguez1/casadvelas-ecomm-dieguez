@@ -8,6 +8,7 @@ import Products from "./components/products/Products";
 import Cart from "./components/cart/Cart";
 import CartContext from "./context/CartContext";
 import { initializeApp } from "firebase/app";
+import CartCheckout from "./components/cartCheckout/CartCheckout";
 
 function App() {
   const firebaseConfig = {
@@ -35,6 +36,7 @@ function App() {
             />
             <Route path="/product/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<CartCheckout />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

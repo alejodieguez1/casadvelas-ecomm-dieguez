@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { createContext } from "react";
 import { useState } from "react";
 
@@ -7,7 +8,11 @@ export const Contexto = createContext({});
 const { Provider } = Contexto;
 
 export default function CartContext({ children }) {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("cart"))
+      ? JSON.parse(localStorage.getItem("cart"))
+      : []
+  );
 
   const isInCart = (id) => {
     return cart.some((x) => x.id === id);
@@ -45,6 +50,10 @@ export default function CartContext({ children }) {
   const getItemPrice = () => {
     return cart.reduce((acc, x) => (acc += x.qty * x.price), 0);
   };
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   return (
     <Provider
