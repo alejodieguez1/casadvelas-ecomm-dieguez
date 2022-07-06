@@ -9,6 +9,7 @@ import Cart from "./components/cart/Cart";
 import CartContext from "./context/CartContext";
 import { initializeApp } from "firebase/app";
 import CartCheckout from "./components/cartCheckout/CartCheckout";
+import './app.css'
 
 function App() {
   const firebaseConfig = {

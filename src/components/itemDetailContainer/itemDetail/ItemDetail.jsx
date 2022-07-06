@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Contexto } from "../../../context/CartContext";
 import ItemCount from "../../itemCounter/ItemCount";
-import "./itemDetail.css";
 
 export default function ItemDetail({ product }) {
   const [counter, setCounter] = useState(true);

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import CartWidget from "../cartWidget/CartWidget";
-import "./main.css";
 let logo = require("../../assets/logo-white-bg.jpg");
 
 

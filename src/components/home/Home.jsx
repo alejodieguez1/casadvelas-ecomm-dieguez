@@ -1,6 +1,5 @@
 import React from "react";
 import ItemListContainer from "../itemListContainer/ItemListContainer";
-import "./main.css";
 
 let textLogo = require("../../assets/text-logo.png");
 

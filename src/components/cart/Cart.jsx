@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Contexto } from "../../context/CartContext";
-import "../itemDetailContainer/itemDetail/itemDetail.css";
 
 export default function Cart() {
   const { cart, getItemPrice, emptyCart, deleteItem } = useContext(Contexto);

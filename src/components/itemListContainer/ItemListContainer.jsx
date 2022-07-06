@@ -8,7 +8,6 @@ import {
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./itemList/ItemList";
-import "./main.css";
 
 export default function ItemListContainer() {
   const [productos, setProductos] = useState([]);
