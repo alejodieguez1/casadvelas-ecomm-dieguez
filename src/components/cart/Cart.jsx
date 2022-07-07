@@ -8,50 +8,56 @@ export default function Cart() {
   return (
     <>
       {cart.length > 0 ? (
-        <div>
+        <section id="cart-section">
           {cart.map((item, index) => {
             return (
-              <div key={index} className="product-container">
-                <div id="product-detail">
-                  <img
-                    src={item.image}
-                    alt="producto"
-                    className="product-img"
-                  />
-                  <h3>{item.name}</h3>
-                  <p>${item.price}</p>
-                  <p>Cantidad:{item.qty}</p>
-                  <br />
-                  <button
-                    type="button"
-                    className="btn"
-                    onClick={() => deleteItem(item.id)}
-                  >
-                    Quitar del carrito
-                  </button>
+              <div className="itemsContainer">
+                <div key={index} className="product-container">
+                  <div id="product-detail">
+                    <img
+                      src={item.image}
+                      alt="producto"
+                      className="product-img"
+                    />
+                    <h3>{item.name}</h3>
+                    <p>${item.price}</p>
+                    <p>Cantidad:{item.qty}</p>
+                    <br />
+                    <button
+                      type="button"
+                      className="btn"
+                      onClick={() => deleteItem(item.id)}
+                    >
+                      Quitar del carrito
+                    </button>
+                  </div>
                 </div>
               </div>
             );
           })}
-          <p>Final Price: ${getItemPrice()}</p>
-          <Link to="/checkout">
-            <button type="button" className="btn">
-              Finalizar pedido
+          <div id="total-section">
+            <p>Final Price: ${getItemPrice()}</p>
+            <Link to="/checkout">
+              <button type="button" className="btn">
+                Finalizar pedido
+              </button>
+            </Link>
+            <button type="button" className="btn" onClick={() => emptyCart()}>
+              Vaciar carrito
             </button>
-          </Link>
-          <button type="button" className="btn" onClick={() => emptyCart()}>
-            Vaciar carrito
-          </button>
-        </div>
+          </div>
+        </section>
       ) : (
-        <>
-          <div>El carrito esta vacio</div>
-          <Link to="/products">
-            <button type="button" className="btn">
-              Busca productos
-            </button>
-          </Link>
-        </>
+        <section id="empty-section">
+          <div className="empty-container">
+            <p className="empty-name">El carrito esta vacio :(</p>
+            <Link to="/products">
+              <button type="button" className="btn">
+                Busca productos
+              </button>
+            </Link>
+          </div>
+        </section>
       )}
     </>
   );

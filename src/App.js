@@ -25,7 +25,7 @@ function App() {
 
   return (
     <CartContext>
-      <div className="App">
+      <div className="App app-container">
         <BrowserRouter>
           <NavBar />
           <Routes>
