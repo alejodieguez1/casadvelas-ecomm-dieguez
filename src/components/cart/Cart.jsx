@@ -11,8 +11,8 @@ export default function Cart() {
         <section id="cart-section">
           {cart.map((item, index) => {
             return (
-              <div className="itemsContainer">
-                <div key={index} className="product-container">
+              <div key={index} className="itemsContainer">
+                <div className="product-container">
                   <div id="product-detail">
                     <img
                       src={item.image}
