@@ -33,13 +33,13 @@ export default function ItemDetail({ product }) {
             onAdd={onAdd}
           />
         ) : (
-          <div>
+          <div className="product-buy">
             <button type="button" className="btn">
-              <Link to="/products">Seguir comprando</Link>
+              <Link to="/products" className="btn-link">Seguir comprando</Link>
             </button>
             <br />
             <button type="button" className="btn">
-              <Link to="/cart">Ir al carrito</Link>
+              <Link to="/cart" className="btn-link">Ir al carrito</Link>
             </button>
           </div>
         )}

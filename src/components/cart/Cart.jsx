@@ -36,13 +36,13 @@ export default function Cart() {
             );
           })}
           <div id="total-section">
-            <p>Final Price: ${getItemPrice()}</p>
+            <p>Precio final: ${getItemPrice()}</p>
             <Link to="/checkout">
-              <button type="button" className="btn">
+              <button type="button" className="btn cart-btn">
                 Finalizar pedido
               </button>
             </Link>
-            <button type="button" className="btn" onClick={() => emptyCart()}>
+            <button type="button" className="btn cart-btn" onClick={() => emptyCart()}>
               Vaciar carrito
             </button>
           </div>

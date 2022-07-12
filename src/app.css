@@ -284,6 +284,14 @@ button:hover {
 button:active {
   transform: scale(0.9);
 }
+.btn-link {
+    color: #fff;
+    text-decoration: none;
+}
+button:hover .btn-link {
+    color: #d9c09f;
+    transition: ease-out 0.3s;
+}
 #cart-section {
     background-color: #d9c09f;
 }
