@@ -331,13 +331,23 @@ button:hover .btn-link {
   background-color: #fff;
   padding: 20px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.233);
+  height: 800px;
+}
+.form-container p {
+  font-size: 1.3rem;
 }
 .input-label p{
-  margin: 10px;
+  margin: 15px;
+  margin-top: 25px;
+}
+.input {
+  width: 60%;
+  height: 20px;
+  border: 2px solid #d9c09f;
 }
 .error-message {
   color: #ce4141;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 0;
   margin-top: 5px;
 }
@@ -365,6 +375,27 @@ button:hover .btn-link {
 }
 #footer-section .footer-container .social-logos a i {
   color: #d9c09f;
+}
+
+
+@media all and (min-width: 768px) {
+  .home-text {
+    font-size: 1.2rem;
+  }
+  #products-section .itemsContainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .cartProducts-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  #form-section {
+    text-align: left;
+  }
+  .input {
+    width: 30%;
+  }
 }
 
 .spinner {

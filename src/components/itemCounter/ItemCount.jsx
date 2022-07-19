@@ -45,7 +45,7 @@ function ItemCount({ qty, setQty, stock, onAdd }) {
         className="cart-btn btn"
         onClick={() => navigate(-1)}
       >
-        ← Back
+        ← Volver
       </button>
     </div>
   );

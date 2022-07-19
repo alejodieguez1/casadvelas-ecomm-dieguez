@@ -9,6 +9,7 @@ export default function Cart() {
     <>
       {cart.length > 0 ? (
         <section id="cart-section">
+          <div className="cartProducts-container">
           {cart.map((item, index) => {
             return (
               <div key={index} className="itemsContainer">
@@ -35,6 +36,7 @@ export default function Cart() {
               </div>
             );
           })}
+          </div>
           <div id="total-section">
             <p>Precio final: ${getItemPrice()}</p>
             <Link to="/checkout">

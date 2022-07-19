@@ -1,10 +1,12 @@
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useContext, useState } from "react";
-import { Contexto } from "../../context/CartContext";
-import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import { Contexto } from "../../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 export default function CartCheckout() {
+  let navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -49,7 +51,7 @@ export default function CartCheckout() {
   return (
     <div id="form-section">
       <div className="form-container">
-      <p>Completa con tus datos</p>
+        <p>Completa con tus datos</p>
         <form onSubmit={handleSubmit(onSubmit)} className="form">
           <div className="input-container">
             <label htmlFor="name" className="input-label">
@@ -74,7 +76,9 @@ export default function CartCheckout() {
                 },
               })}
             />
-            {errors.name && <h6 className="error-message">{errors.name.message}</h6>}
+            {errors.name && (
+              <h6 className="error-message">{errors.name.message}</h6>
+            )}
           </div>
           <div className="input-container">
             <label htmlFor="email" className="input-label">
@@ -98,7 +102,9 @@ export default function CartCheckout() {
                 },
               })}
             />
-            {errors.email && <h6 className="error-message">{errors.email.message}</h6>}
+            {errors.email && (
+              <h6 className="error-message">{errors.email.message}</h6>
+            )}
           </div>
           <div className="input-container">
             <label htmlFor="phone" className="input-label">
@@ -123,13 +129,22 @@ export default function CartCheckout() {
                 },
               })}
             />
-            {errors.phone && <h6 className="error-message">{errors.phone.message}</h6>}
+            {errors.phone && (
+              <h6 className="error-message">{errors.phone.message}</h6>
+            )}
           </div>
           <div className="price-container">
             <p>Precio Total</p>
             <p>${getItemPrice()}</p>
           </div>
           <button type="submit">FINALIZAR PEDIDO</button>
+          <button
+            type="button"
+            className="cart-btn btn"
+            onClick={() => navigate(-1)}
+          >
+            ← Volver
+          </button>
         </form>
       </div>
     </div>

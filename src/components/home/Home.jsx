@@ -13,22 +13,22 @@ export default function Home() {
       </main>
       <section id="description-section">
         <div className="container">
-          <p>
+          <p className="home-p home-text">
             La cera de soja es natural, ecológica y sostenible. Las velas
             elaboradas con cera de soja tienen muchas ventajas:
           </p>
           <ul>
-            <li>
+            <li className="home-li home-text">
               -No contaminan el medio ambiente, que que liberan un 90 % menos
               hollín.
             </li>
-            <li>-Su duración es mayor, el doble que las de parafina.</li>
-            <li>-Se consumen totalmente.</li>
+            <li className="home-li home-text">-Su duración es mayor, el doble que las de parafina.</li>
+            <li className="home-li home-text">-Se consumen totalmente.</li>
           </ul>
         </div>
       </section>
       <section className="parallax">
-        <h2>PRODUCTOS</h2>
+        <h2 className="home-h2 home-title">PRODUCTOS</h2>
       </section>
       <section id="products-section">
         <ItemListContainer />
