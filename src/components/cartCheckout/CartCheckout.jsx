@@ -49,41 +49,20 @@ export default function CartCheckout() {
     };
 
     return (
-      <>
-        {cart.length > 0 ? (
-          <ul>
-            {cart.map((item, index) => {
-              return (
-                <li key={index}>
-                  <div>
-                    <h3>{item.name}</h3>
-                    <p>${item.price}</p>
-                    <p>Cantidad:{item.qty}</p>
-                    <br />
-                  </div>
-                </li>
-              );
-            })}
-            <p>Final Price: ${getItemPrice()}</p>
-          </ul>
-        ) : (
-          <>
-            <div>El carrito esta vacio</div>
-          </>
-        )}
         <div id="formSection">
           <p>Completa con tus datos</p>
           <div className="form-container">
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div>
-                <label htmlFor="name">
-                  <b>NOMBRE</b>
+              <div className="input-container">
+                <label htmlFor="name" className="input-label">
+                  <p>Nombre</p>
                 </label>
                 <input
                   type="name"
                   onChange={(e) => setName(e.target.value)}
                   id="name"
                   placeholder="Ingresa tu nombre"
+                  className="input"
                   {...register("name", {
                     required: {
                       value: true,
@@ -99,15 +78,16 @@ export default function CartCheckout() {
                 />
                 {errors.name && <h6>{errors.name.message}</h6>}
               </div>
-              <div>
-                <label htmlFor="lastname">
-                  <b>APELLIDO</b>
+              <div className="input-container">
+                <label htmlFor="lastname" className="input-label">
+                  <p>Apellido</p>
                 </label>
                 <input
                   type="lastname"
                   onChange={(e) => setLastName(e.target.value)}
                   id="lastname"
                   placeholder="Ingresa tu apellido"
+                  className="input"
                   {...register("lastname", {
                     required: {
                       value: true,
@@ -122,15 +102,16 @@ export default function CartCheckout() {
                 />
                 {errors.lastname && <h6>{errors.lastname.message}</h6>}
               </div>
-              <div>
-                <label htmlFor="email">
-                  <b>EMAIL</b>
+              <div className="input-container">
+                <label htmlFor="email" className="input-label">
+                  <p>Email</p>
                 </label>
                 <input
                   type="email"
                   onChange={(e) => setEmail(e.target.value)}
                   id="email"
                   placeholder="Ingresa tu email"
+                  className="input"
                   {...register("email", {
                     required: {
                       value: true,
@@ -145,15 +126,16 @@ export default function CartCheckout() {
                 />
                 {errors.email && <h6>{errors.email.message}</h6>}
               </div>
-              <div>
-                <label htmlFor="phone">
-                  <b>TELEFONO</b>
+              <div className="input-container">
+                <label htmlFor="phone" className="input-label">
+                  <p>Telefono</p>
                 </label>
                 <input
                   type="phone"
                   onChange={(e) => setPhone(e.target.value)}
                   id="phone"
                   placeholder="Ingresa tu teléfono"
+                  className="input"
                   {...register("phone", {
                     required: {
                       value: true,
@@ -169,19 +151,18 @@ export default function CartCheckout() {
                 />
                 {errors.phone && <h6>{errors.phone.message}</h6>}
               </div>
-              <div>
+              <div className="price-container">
                 <p>
-                  <b>PRECIO TOTAL</b>
+                  <b>Precio Total</b>
                 </p>
                 <p>
-                  <b>${getItemPrice()}</b>
+                  <p>${getItemPrice()}</p>
                 </p>
               </div>
               <button type="submit">FINALIZAR PEDIDO</button>
             </form>
           </div>
         </div>
-      </>
     );
   };
 
