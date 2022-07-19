@@ -74,10 +74,6 @@ function NavBar() {
               Carrito
             </Link>
           </li>
-          <span className="nav-span" />
-          <li className="nav-li">
-            <a className="li-a">Contacto</a>
-          </li>
         </ul>
       </nav>
     </header>

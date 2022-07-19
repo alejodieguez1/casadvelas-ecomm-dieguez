@@ -324,6 +324,13 @@ button:hover .btn-link {
 }
 #form-section {
   text-align: center;
+  background-color: #d9c09f;
+  padding: 10px;
+}
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.233);
 }
 .input-label p{
   margin: 10px;

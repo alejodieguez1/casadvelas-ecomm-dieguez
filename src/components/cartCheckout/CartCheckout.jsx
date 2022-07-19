@@ -48,8 +48,8 @@ export default function CartCheckout() {
 
   return (
     <div id="form-section">
-      <p>Completa con tus datos</p>
       <div className="form-container">
+      <p>Completa con tus datos</p>
         <form onSubmit={handleSubmit(onSubmit)} className="form">
           <div className="input-container">
             <label htmlFor="name" className="input-label">
@@ -64,7 +64,7 @@ export default function CartCheckout() {
               {...register("name", {
                 required: {
                   value: true,
-                  maxLength: 20,
+                  minLength: 3,
                   message: "Ingrese un nombre",
                 },
                 pattern: {
@@ -89,7 +89,7 @@ export default function CartCheckout() {
               {...register("email", {
                 required: {
                   value: true,
-                  maxLength: 20,
+                  minLength: 3,
                   message: "Ingrese un email",
                 },
                 pattern: {
@@ -113,7 +113,7 @@ export default function CartCheckout() {
               {...register("phone", {
                 required: {
                   value: true,
-                  maxLength: 20,
+                  minLength: 5,
                   message: "Ingrese un teléfono",
                 },
                 pattern: {
