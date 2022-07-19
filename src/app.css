@@ -322,6 +322,18 @@ button:hover .btn-link {
 .empty-container .empty-name {
   font-size: 1.2rem;
 }
+#form-section {
+  text-align: center;
+}
+.input-label p{
+  margin: 10px;
+}
+.error-message {
+  color: #ce4141;
+  font-size: 0.8rem;
+  margin: 0;
+  margin-top: 5px;
+}
 #footer-section {
   background: #ffff;
   border-top: 2px black;
