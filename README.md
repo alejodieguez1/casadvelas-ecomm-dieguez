@@ -1,4 +1,11 @@
-## Aplicacion creada con Create React App
+## E-Commerce Project Created using React Js
+
+This would be the third project created for the Fullstack Development career at Coderhouse.
+
+## APP Usage
+# App Usage
+![desktop](https://imgur.com/a/5KO69Qh)
+
 ## Available Scripts
 
 In the project directory, you can run:
