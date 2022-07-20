@@ -3,8 +3,7 @@
 This would be the third project created for the Fullstack Development career at Coderhouse.
 
 ## APP Usage
-# App Usage
-![desktop](https://imgur.com/a/5KO69Qh)
+[GIF Link](https://imgur.com/a/5KO69Qh)
 
 ## Available Scripts
 
