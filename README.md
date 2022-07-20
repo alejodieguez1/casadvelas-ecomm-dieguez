@@ -1,6 +1,6 @@
 ## E-Commerce Project Created using React Js
 
-This would be the third project created for the Fullstack Development career at Coderhouse.
+This is the third project created for the Fullstack Development career at Coderhouse.
 
 ## APP Usage
 ![GIF Link](https://imgur.com/a/5KO69Qh)
