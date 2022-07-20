@@ -3,26 +3,43 @@
 This would be the third project created for the Fullstack Development career at Coderhouse.
 
 ## APP Usage
-[GIF Link](https://imgur.com/a/5KO69Qh)
+![GIF Link](https://imgur.com/a/5KO69Qh)
 
-## Available Scripts
+---
+### Initialize Project
+To start this project, you must clone or fork the repository
 
-In the project directory, you can run:
+    git clone https://github.com/alejodieguez1/casadvelas-ecomm-dieguez.git
 
-### `npm start`
+Once the repository is cloned, it should be moved to the created folder
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    cd gaming-store
+    
+Already positioned in the cloned folder, you will need to install the dependencies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    npm install
+    
+Once the dependencies are installed, run the following command
 
-### `npm run build`
+    npm start
+    
+    
+---
+### Main libraries used in this project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| library                                                          | used                      |
+| ---------------------------------------------------------------- | ------------------------- |
+| [React Router DOM V6](https://reactrouter.com/)                  | Router lib for React      |
+| [React Hook Form](https://react-hook-form.com/)                  | React Form Library        |
+| [Sweet Alert2](https://sweetalert2.github.io/l)                  | Sweet Alert2              |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Author: Alejo Dieguez
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Contact](mailto:alejodieguez2012@gmail.com)
+- [GitHub](https://github.com/alejodieguez1)
+- [Linkedin](https://www.linkedin.com/in/alejo-dieguez-b244901a9/)
+
+
+
+---
+This project was developed for the React Js course on the CoderHouse platform [![coderhouse](https://emprelatam.com/wp-content/uploads/2019/10/logos-coderhouse-01.png)](https://www.coderhouse.com/)
