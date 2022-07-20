@@ -13,7 +13,7 @@ To start this project, you must clone or fork the repository
 
 Once the repository is cloned, it should be moved to the created folder
 
-    cd gaming-store
+    cd casadvelas-ecomm-dieguez
     
 Already positioned in the cloned folder, you will need to install the dependencies
 
